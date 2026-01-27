@@ -3,7 +3,7 @@
 /*******************************/
 /*******************************/
 :root {
-  --color-primary: #2C7A7B;     /* Verde azulado profesional */
+  --color-primary: #527993;     /* Verde azulado profesional */
   --secundary: #F7FAFC;         /* Gris muy claro (casi blanco), fondo limpio */
   --text-color: #1A202C;        /* Gris azulado oscuro para excelente legibilidad */
   --accent-color: #3182CE;      /* Azul medio moderno, ideal para resaltar elementos */
@@ -15,7 +15,7 @@
 
 
 body {
-    color: #797979;
+    color: black;
     background: #ffffff;
     font-family: 'Montserrat', sans-serif;
 }
@@ -57,10 +57,10 @@ a:focus {
     font-weight: 600;
     letter-spacing: 1px;
     color: #ffffff;
-    background: var(--accent-color);
+    background: var(--color-primary);
     border: 2px solid transparent;
     border-radius: 0;
-    box-shadow: inset 0 0 0 50px var(--accent-color);
+    box-shadow: inset 0 0 0 50px var(--color-primary);
     transition: ease-out 0.3s;
     -webkit-transition: ease-out 0.3s;
     -moz-transition: ease-out 0.3s;
@@ -197,7 +197,7 @@ a:focus {
     }
     
     .navbar .navbar-brand {
-        color: #ffffff;
+        color: var(--color-primary);
     }
     
     .navbar.nav-sticky .navbar-brand {
@@ -207,7 +207,7 @@ a:focus {
     .navbar-light .navbar-nav .nav-link,
     .navbar-light .navbar-nav .nav-link:focus {
         padding: 10px 10px 8px 10px;
-        color: #ffffff;
+        color: black;
         font-size: 15px;
         font-weight: 500;
     }
@@ -261,7 +261,6 @@ a:focus {
     margin-bottom: 45px;
     padding: 120px 0 0 0;
     overflow: hidden;
-    background: linear-gradient(var(--color-primary), var(--secundary)), url(../img/perfil1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -291,11 +290,16 @@ a:focus {
     justify-content: center;
     flex-direction: column;
 }
-
+    .badge-skill {
+      background: #e2eef5;
+      color: var(--text-color-pr);
+      font-weight: 500;
+      margin: 0.25rem;
+    }
 .hero .hero-text p {
-    color: var(--text-color-pr) !important;
-    font-size: 25px;
-    font-weight: 600;
+    color: black !important;
+    font-size: 20px;
+    font-weight: 200;
     margin-bottom: 15px;
 }
 
@@ -439,8 +443,8 @@ a:focus {
     margin-bottom: 10px;
     padding-left: 15px;
     position: relative;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     background: #ffffff;
@@ -450,7 +454,7 @@ a:focus {
     position: absolute;
     content: "";
     height: 3px;
-    top: 11px;
+    top: 20px;
     right: 0;
     left: -30px;
     background: var(--color-primary);
@@ -462,7 +466,7 @@ a:focus {
     content: "";
     width: 3px;
     height: 3px;
-    top: 11px;
+    top: 20px;
     left: 3px;
     background: var(--color-primary);
     z-index: 1;
@@ -471,8 +475,8 @@ a:focus {
 .section-header h2 {
     margin: 0;
     position: relative;
-    font-size: 45px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 @media (max-width: 767.98px) {
@@ -755,15 +759,10 @@ a:focus {
     box-shadow: inset 0 0 0 0 transparent;
     transition: ease-out 0.5s;
 }
-
-.service .service-item:hover {
-    box-shadow: inset 800px 0 0 0 var(--color-primary);
-}
-
 .service .service-icon {
     position: relative;
-    width: 150px;
-    min-height: 150px;
+    width: 70px;
+    min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -773,13 +772,13 @@ a:focus {
 
 .service .service-icon i {
     position: relative;
-    font-size: 60px;
+    font-size: 20px;
     color: var(--color-primary);
     transition: .3s;
 }
 
 .service .service-item:hover i {
-    font-size: 75px;
+    font-size: 35px;
 }
 
 .service .service-text {
@@ -790,7 +789,7 @@ a:focus {
 
 .service .service-text h3 {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     transition: 1s;
 }
@@ -801,10 +800,6 @@ a:focus {
     transition: 1s;
 }
 
-.service .service-item:hover .service-text h3,
-.service .service-item:hover .service-text p {
-    color: #ffffff;
-}
 
 @media (max-width: 575.98px) {
     .service .service-text h3 {
@@ -894,7 +889,7 @@ a:focus {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   transform: scale(1.1);
   transition: 0.5s;
