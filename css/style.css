@@ -3,12 +3,12 @@
 /*******************************/
 /*******************************/
 :root {
-  --color-primary: #527993;     /* Verde azulado profesional */
-  --secundary: #F7FAFC;         /* Gris muy claro (casi blanco), fondo limpio */
-  --text-color: #1A202C;        /* Gris azulado oscuro para excelente legibilidad */
-  --accent-color: #3182CE;      /* Azul medio moderno, ideal para resaltar elementos */
-  --hover-color: #F6C358;       /* Amarillo suave y profesional para botones y efectos hover */
-  --text-color-pr: #2F4858;     /* Azul grisáceo sobrio y elegante */
+    --color-primary: #857767;
+    --secundary: #F7FAFC;
+    --text-color: #1A202C;
+    --accent-color: #dcd7d2;
+    --hover-color: #eccf94;
+    --text-color-pr: #615547;
 }
 
 
@@ -30,7 +30,7 @@ h6 {
 }
 
 a {
-    color: #313131;
+    color: var(--text-color-pr);
     transition: .3s;
 }
 
@@ -219,7 +219,7 @@ a:focus {
 
     .navbar-light .navbar-nav .nav-link:hover,
     .navbar-light .navbar-nav .nav-link.active {
-        color: #111111;
+        color: var(--color-primary);
     }
     
     .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
@@ -258,95 +258,34 @@ a:focus {
 .hero {
     position: relative;
     width: 100%;
-    margin-bottom: 45px;
-    padding: 120px 0 0 0;
+    min-height: 560px;
+    padding: 145px 0 90px;
     overflow: hidden;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: var(--text-color-pr) !important;
+    background:
+        radial-gradient(circle at top right, var(--color-primary), transparent 34%),
+        linear-gradient(135deg, var(--secundary) 0%, var(--secundary) 52%, var(--secundary) 100%);
 }
-
-.hero .container-fluid {
-    padding: 0;
-}
-
-.hero .hero-image {
-    position: relative;
-    text-align: right;
-    padding-right: 75px;
-}
-
-.hero .hero-image img {
-    max-width: 80%;
-    max-height: 80%;
-}
-
 .hero .hero-content {
     position: relative;
-    padding-left: 75px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
+    max-width: 900px;
+    padding: 0 75px;
 }
-    .badge-skill {
-      background: #e2eef5;
-      color: var(--text-color-pr);
-      font-weight: 500;
-      margin: 0.25rem;
-    }
-.hero .hero-text p {
-    color: black !important;
-    font-size: 20px;
-    font-weight: 200;
-    margin-bottom: 15px;
-}
-
 .hero .hero-text h1 {
-        color: var(--text-color-pr) !important;
-    font-size: 60px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
+    color: var(--color-primary) !important;
+    font-size: clamp(38px, 6vw, 66px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
 }
-
-.hero .hero-text h2 {
-    display: inline-block;
-    margin: 0;
-    height: 35px;
-    color: var(--text-color-pr) !important;
-    font-size: 35px;
-    font-weight: 600;
+.hero .hero-text p {
+    max-width: 760px;
+    color: var(--text-muted) !important;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
 }
-
-.hero .hero-text .typed-text {
-    display: none;
-}
-
-.hero .hero-text .typed-cursor {
-    font-size: 35px;
-    font-weight: 300;
-    color: #ffffff;
-}
-
-.hero .hero-btn .btn {
-    margin-top: 35px;
-    color: var(--secundary);
-    background-color: var(--text-color-pr) !important;
-    box-shadow: inset 0 0 0 50px var(--text-color-pr);
-}
-
-.hero .hero-btn .btn:hover {
-    color: var(--text-color);
-    background: transparent;
-    box-shadow: inset 0 0 0 0 var(--text-color-pr);
-    border-color: var(--text-color-pr);
-}
-
-.hero .hero-btn .btn:first-child {
-    margin-right: 10px;
-}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
 @media (max-width: 991.98px) {
     .hero {
@@ -1624,4 +1563,13 @@ a:focus {
         line-height: 16px;
         padding: 0 5px;
     }
+}
+.modal-header{
+    background-color: var(--secundary) !important;
+    color: var(--text-color-pr) !important;
+    font-weight: bold !important;
+}
+.modal-header h5{
+    color: var(--text-color-pr) !important;
+    font-weight: bold !important;
 }
