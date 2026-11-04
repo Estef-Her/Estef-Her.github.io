@@ -3,12 +3,13 @@
 /*******************************/
 /*******************************/
 :root {
-    --color-primary: #857767;
+    --color-primary: #42a39f;
     --secundary: #F7FAFC;
     --text-color: #1A202C;
     --accent-color: #dcd7d2;
-    --hover-color: #eccf94;
-    --text-color-pr: #615547;
+    --hover-color: #59d9d4;
+    --text-color-pr: #11b3ad;
+    --color-primary-bar:#b0fffc;
 }
 
 
@@ -262,7 +263,7 @@ a:focus {
     padding: 145px 0 90px;
     overflow: hidden;
     background:
-        radial-gradient(circle at top right, var(--color-primary), transparent 34%),
+        radial-gradient(circle at top right, var(--color-primary-bar), transparent 34%),
         linear-gradient(135deg, var(--secundary) 0%, var(--secundary) 52%, var(--secundary) 100%);
 }
 .hero .hero-content {
